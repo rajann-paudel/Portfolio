@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajan - Portfolio</title>
+
+    <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    
+    <link rel="stylesheet" id="themeStylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <a href="./index.html"><span class="logo">Rajan</span></a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#spatial-tools">Spatial Tools</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero-section" id="home">
+            <div>
+                <div>
+                    <h4 title="Hello, How are you?">Hi, There!</h4>
+                    <h2 class="hero-section__title">I'm <span>Rajan</span></h2>
+                    <p class="hero-section__desc">Hi! I'm a Geomatics Engineering student who’s always exploring—whether that means diving into spatial data or discovering new music. I'm passionate about geospatial technologies like GIS, Remote Sensing, and Web Mapping, and I love combining creativity with tech—whether it's building websites or working on meaningful mapping projects. Outside the classroom, I'm a football fan, car enthusiast, and someone who’s endlessly curious about how things work, both in the digital and real world.</p>
+                </div>
+
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/Rajan.Paudel.E" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://np.linkedin.com/in/rajan-paudel-56a5b735b" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/rajan_paudel_10/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://x.com/rajanpaudel44" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="hero-img">
+                <img src="assets/img/Rajan.jpg" alt="Rajan-portfolio" width="350">
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="about-img">
+                <img src="assets/img/Rajan.jpg" alt="Rajan-portfolio">
+            </div>
+            <div class="about-content">
+                <h4>About Me</h4>
+                <h2>I am a GIS Expert & <br> <span>Web Developer</span></h2>
+                <p>I'm fascinated by how data reveals patterns in the world around us. As a Geomatics Engineering student, I’ve worked with tools like QGIS, ArcGIS, and PostGIS on projects such as drone mapping, land use analysis, and topographic surveys. I enjoy combining technical skills with creative thinking to solve spatial problems. Whether mapping terrain or building websites, I'm driven by curiosity, continuous learning, and the desire to create practical, real-world solutions.</p>
+                <h3>Academic Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2021 – 2026</div>
+                        <div class="timeline-content">
+                            <h4>Bachelor in Geomatics Engineering</h4>
+                            <p>Kathmandu University</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019 – 2021</div>
+                        <div class="timeline-content">
+                            <h4>Higher Secondary (+2) – Science</h4>
+                            <p>Gandaki Boarding School, Pokhara</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Up to 2018</div>
+                        <div class="timeline-content">
+                            <h4>School Leaving Certificate (SLC)</h4>
+                            <p>V.S. Niketan Secondary School, Kathmandu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-skills-section" id="skills">
+            <h2>My <span>Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card"><img src="assets/img/gis-logos.png" alt="ArcGIS and QGIS Logos"><h4>ArcGIS / QGIS</h4></div>
+                <div class="skill-card"><img src="assets/img/photogrammetry.png" alt="Photogrammetry Drone Icon"><h4>Photogrammetry</h4></div>
+                <div class="skill-card"><img src="assets/img/remote-sensing.png" alt="Remote Sensing Satellite Icon"><h4>Remote Sensing</h4></div>
+                <div class="skill-card"><img src="assets/img/cartography.png" alt="Cartography Globe Icon"><h4>Cartography</h4></div>
+                <div class="skill-card"><img src="assets/img/programming.jpg" alt="Programming Language Logos"><h4>Programming</h4></div>
+                <div class="skill-card"><img src="assets/img/database.png" alt="PostgreSQL Database Icon"><h4>Database (Postgres)</h4></div>
+                <div class="skill-card"><img src="assets/img/surveying.png" alt="Surveying Icon"><h4>Land Surveying</h4></div>
+                <div class="skill-card"><img src="assets\img\web-mapping.png" alt="Web Mapping Icon"><h4>Web Mapping</h4></div>
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+            <h2>My <span>Projects</span></h2>
+            <div class="projects-grid">
+                <a href="work1.pdf" target="_blank" class="project-item" style="background-image: url('assets/img/work1.jpg');">
+                    <div class="project-item-hover">
+                        <h4>Geographic Information System</h4>
+                        <p>A GIS-Based Evacuation Route Planning in Flood Susceptible Area</p>
+                        <span class="view-project-btn">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                </a>
+                <a href="work2.pdf" target="_blank" class="project-item" style="background-image: url('assets/img/work2.png');">
+                    <div class="project-item-hover">
+                        <h4>Photogrammetry / UAV</h4>
+                        <p>Preparation of Topographical Map Using Unmanned Air Vehicle (UAV)</p>
+                        <span class="view-project-btn">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                </a>
+                <a href="work3.pdf" target="_blank" class="project-item" style="background-image: url('assets/img/work3.png');">
+                    <div class="project-item-hover">
+                        <h4>Remote Sensing</h4>
+                        <p>A Land Use/Land Cover Map of Bhaktapur District</p>
+                        <span class="view-project-btn">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                </a>
+                <a href="work4.pdf" target="_blank" class="project-item" style="background-image: url('assets/img/work4.png');">
+                    <div class="project-item-hover">
+                        <h4>Remote Sensing / Image Classification</h4>
+                        <p>Preparation of LULC Maps (2 Supervised and 2 Unsupervised)</p>
+                        <span class="view-project-btn">View Project <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="spatial-tools-map-section" id="spatial-tools">
+            <h2>Spatial <span>Tools</span></h2>
+            <div id="map"></div>
+            <div class="map-buttons">
+                <button id="bufferBtn" class="btn btn-primary">Create Buffer (1km)</button>
+                <button id="measureBtn" class="btn btn-primary">Measure Distance</button>
+                <button id="areaBtn" class="btn btn-primary">Draw Polygon for Area</button>
+            </div>
+        </section>
+
+       <section class="contact-section" id="contact">
+            <h2>Contact <span>ME!</span></h2>
+            <form action="https://formspree.io/f/xnndjevd" method="POST" class="contact__form" id="contactForm">
+                <div><label for="name"></label><input type="text" id="name" name="name" placeholder="Full Name" class="contact__input" required></div>
+                <div><label for="email"></label><input type="email" id="email" name="email" placeholder="Email" class="contact__input" required></div>
+                <div><label for="message"></label><textarea id="message" name="message" placeholder="Type Message" rows="5" class="contact__input" required></textarea></div>
+                <div><button type="submit" class="contact__button button" id="submitBtn">Send</button></div>
+                <p id="formMessage" class="form-message" style="display:none; color: green; margin-top: 10px;">✅ Thank you! Your message has been sent.</p>
+            </form>
+            <div class="contact__github">
+                <button class="btn"><a href="https://github.com/rajann-paudel" target="_blank"><i class="fa-brands fa-github"></i> Github</a></button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2025 - <a href="https://github.com/rajann-paudel" target="_blank">Rajan</a> - All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
