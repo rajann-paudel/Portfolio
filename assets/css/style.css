@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
 
-/* Global variables */
+/* --- Light & Professional Theme Variables --- */
 :root {
-  --primary: #12bdff;
-  --primary-hover: #0c8ec2;
-  --dark-primary: #1b1f24;
+  --primary: #007bff;
+  --primary-hover: #0056b3;
+  --light-bg: #ffffff;
+  --secondary-bg: #f8f9fa;
+  --text-color: #212529;
+  --light-text: #ffffff;
+  --muted-text: #6c757d;
+  --border-color: #dee2e6;
 }
 
 * {
@@ -17,26 +22,27 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--dark-primary);
-  color: #fff;
+  background-color: var(--light-bg);
+  color: var(--text-color);
 }
 
-/* Header */
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--dark-primary);
+  background-color: var(--light-bg);
   padding: 25px;
-  color: #fff;
+  color: var(--text-color);
   display: flex;
   justify-content: space-around;
   align-items: center;
   z-index: 1001;
-  border-bottom: 1px solid #22282f;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 header .logo {
@@ -56,7 +62,7 @@ header ul li {
 }
 
 header ul li a {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease 0s;
@@ -64,13 +70,11 @@ header ul li a {
 
 header ul li a:hover {
   color: var(--primary);
-  transition: all 0.3s ease 0s;
 }
 
-/* Hero Section */
 section.hero-section {
-  background-color: var(--dark-primary);
-  color: #fff;
+  background-color: var(--light-bg);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   padding: 140px 120px 80px 120px;
@@ -90,7 +94,7 @@ section.hero-section {
 }
 
 .hero-section__desc {
-  color: #c4c4c4;
+  color: var(--muted-text);
   max-width: 600px;
 }
 
@@ -101,6 +105,7 @@ section.hero-section {
 .hero-img img {
   margin-left: 30px;
   border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .social-icons {
@@ -117,61 +122,59 @@ ul.social-icons {
   border-radius: 50%;
   border: 1px solid var(--primary);
   padding: 8px 12px;
+  transition: all 0.3s ease 0s;
 }
 
 .social-icons li:hover {
   background-color: var(--primary);
-  transition: all 0.3s ease 0s;
 }
 
 .social-icons li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--primary);
   font-size: 18px;
   transition: all 0.3s ease 0s;
 }
 
-/* buttons */
+.social-icons li:hover a {
+    color: var(--light-text);
+}
+
 .btn {
   padding: 10px 20px;
-  border-radius: 2px;
+  border-radius: 4px;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease 0s;
   display: inline-block;
   text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .btn.btn-primary {
   background-color: var(--primary);
-  color: var(--dark-primary);
+  color: var(--light-text);
   font-weight: 600;
 }
 
 .btn.btn-primary:hover {
   background-color: var(--primary-hover);
-  transition: all 0.3s ease 0s;
 }
 
-.btn-dark-outlined {
-  background-color: transparent;
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  border-radius: 2px;
-  font-weight: 600;
+.btn.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
 }
 
-.btn-dark-outlined:hover {
-  cursor: pointer;
-  background-color: var(--primary);
-  color: #fff !important;
-  transition: all 0.3s ease 0s;
+.btn.btn-secondary:hover {
+    background-color: #5a6268;
 }
 
-/* About Section */
+
 section.about-section {
-  background-color: #22282f;
-  color: #fff;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,10 +188,10 @@ section.about-section {
   padding: 2px;
   border-radius: 50%;
   border: 3px solid var(--primary);
-  box-shadow: 3px 5px 30px #03506e;
+  box-shadow: 3px 5px 30px rgba(0, 123, 255, 0.2);
   object-fit: cover;
 }
-/* Timeline Section */
+
 .timeline {
   margin-top: 30px;
   padding-left: 20px;
@@ -210,9 +213,9 @@ section.about-section {
   width: 16px;
   height: 16px;
   background-color: var(--primary);
-  border: 3px solid #fff;
+  border: 3px solid var(--secondary-bg);
   border-radius: 50%;
-  box-shadow: 0 0 0 2px var(--dark-primary);
+  box-shadow: 0 0 0 2px var(--primary);
 }
 
 .timeline-date {
@@ -223,21 +226,21 @@ section.about-section {
 }
 
 .timeline-content {
-  background-color: #1b1f24;
+  background-color: var(--light-bg);
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 3px 3px 15px rgba(3, 80, 110, 0.3);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.08);
 }
 
 .timeline-content h4 {
   margin: 0 0 5px;
-  color: #fff;
+  color: var(--text-color);
   font-size: 16px;
 }
 
 .timeline-content p {
   margin: 0;
-  color: #c4c4c4;
+  color: var(--muted-text);
   font-size: 14px;
 }
 
@@ -254,67 +257,110 @@ section.about-section {
 }
 
 .about-content p {
-  color: #c4c4c4;
+  color: var(--muted-text);
   font-size: 15px;
 }
 
-/* My Skills Section */
 .my-skills-section {
-    background-color: var(--dark-primary);
-    color: #fff;
-    padding: 60px 40px;
+    background-color: var(--secondary-bg);
+    padding: 80px 40px;
 }
 
 .my-skills-section h2 {
-    font-size: 28px;
     text-align: center;
-    margin-bottom: 40px;
+    font-size: 28px;
+    margin-bottom: 50px;
 }
 
 .my-skills-section h2 > span {
     color: var(--primary);
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    max-width: 1100px;
+.skills-container {
+    max-width: 1200px;
     margin: 0 auto;
+    background-color: var(--light-bg);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+.skills-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.skills-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+.skills-column h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.skills-column h3 i {
+    color: var(--primary);
+    font-size: 22px;
+    width: 25px;
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .skill-card {
-    background-color: #22282f;
-    border-radius: 8px;
-    padding: 30px 20px;
-    text-align: center;
-    border: 1px solid #333a45;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: 12px 22px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    cursor: default;
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(18, 189, 255, 0.15);
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+.skill-card:hover h4 {
+    color: var(--light-text);
 }
 
 .skill-card img {
-    height: 64px;
-    margin-bottom: 20px;
-    object-fit: contain;
+    height: 24px;
+    margin-right: 12px;
 }
 
 .skill-card h4 {
+    margin: 0;
     font-size: 16px;
     font-weight: 500;
-    color: #fff;
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }
 
-
-/* Projects Section with Hover Effect */
 section.projects-section {
-    background-color: #22282f;
-    color: #fff;
-    padding: 50px 120px;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    padding: 80px 40px;
 }
 
 .projects-section h2 {
@@ -346,75 +392,49 @@ section.projects-section {
     transition: transform 0.3s ease;
 }
 
+.projects-grid > a:first-child.project-item {
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
 .project-item:hover {
     transform: scale(1.05);
 }
 
 .project-item-hover {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(27, 31, 36, 0.95);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
     color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    padding: 40px 20px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.35s ease-out;
 }
 
 .project-item:hover .project-item-hover {
-    opacity: 1;
+    transform: translateY(0);
 }
 
 .project-item-hover h4 {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--primary);
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.project-item-hover p {
     font-size: 17px;
-    margin-bottom: 25px;
-}
-
-.project-item-hover .view-project-btn {
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
-    border: 1px solid var(--primary);
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
 }
 
-.project-item:hover .view-project-btn {
-    background-color: var(--primary);
-    color: var(--dark-primary);
-}
-
-.project-item-hover .view-project-btn i {
-    margin-left: 8px;
-}
-
-/* Spatial Tools Interactive Map Section */
 .spatial-tools-map-section {
     padding: 60px 0;
-    background-color: var(--dark-primary);
+    background-color: var(--secondary-bg);
 }
 
 .spatial-tools-map-section h2 {
     font-size: 28px;
     text-align: center;
     margin-bottom: 30px;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .spatial-tools-map-section h2 > span {
@@ -426,31 +446,142 @@ section.projects-section {
     height: 550px;
     background-color: #a2d1ff;
     z-index: 0;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
-.map-buttons {
+/* --- NEW: Styles for the Tabbed Tool Interface --- */
+.tool-switcher {
     display: flex;
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-bottom: none;
+}
+
+.tool-tab-btn {
+    flex: 1;
+    padding: 15px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: var(--muted-text);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tool-tab-btn:hover {
+    background-color: var(--secondary-bg);
+}
+
+.tool-tab-btn.active {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+}
+
+.tool-tab-btn i {
+    margin-right: 8px;
+}
+
+.tool-controls-container {
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 20px 30px;
+}
+
+.tool-panel {
+    display: none; /* Hidden by default */
+    flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: center;
-    gap: 15px;
-    background-color: #22282f;
-    padding: 20px;
-    border-top: 1px solid var(--dark-primary);
+    gap: 20px;
 }
 
-.crosshair-cursor {
-    cursor: crosshair !important;
+.tool-panel.active {
+    display: flex; /* Shown when active */
 }
 
-.leaflet-draw-toolbar a {
-    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/images/spritesheet.png');
-    background-size: 270px 30px;
+.tool-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
+.tool-group label {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--muted-text);
+}
 
-/* Contact Section */
+.tool-select, .tool-input {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.tool-input {
+    width: 100px;
+}
+
+.tool-select:focus, .tool-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+#resetMapBtn {
+    margin-left: auto;
+}
+
+#resetMapBtn i {
+    margin-right: 8px;
+}
+
+.tool-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.tool-step .btn i {
+    margin-right: 8px;
+}
+
+.tool-desc {
+    font-size: 13px;
+    color: var(--muted-text);
+    max-width: 250px;
+}
+
+.buffer-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buffer-form label {
+    font-weight: 500;
+}
+
+.buffer-form input {
+    width: 70px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    font-family: "Poppins", sans-serif;
+}
+
 section.contact-section {
-  background-color: #22282f;
-  color: #fff;
+  background-color: var(--light-bg);
+  color: var(--text-color);
   text-align: center;
   padding: 60px 30px;
 }
@@ -471,16 +602,16 @@ section.contact-section {
 
 .contact-section form div > input,
 textarea {
-  background-color: #c4c4c4;
+  background-color: var(--secondary-bg);
   width: 100%;
   padding: 10px 8px;
   margin-bottom: 10px;
   border-radius: 5px;
-  border: 1px solid transparent;
+  border: 1px solid var(--border-color);
   outline: none;
   resize: none;
   font-family: "Poppins", sans-serif;
-  color: #1b1f24;
+  color: var(--text-color);
 }
 
 .contact-section form div > input:focus,
@@ -490,13 +621,12 @@ textarea:focus {
 
 .contact__github button {
   padding: 10px 44px;
-  background-color: #171515;
-  font-size: 14px;
+  background-color: #343a40;
 }
 
 .contact__github button > a {
   text-decoration: none;
-  color: #fff;
+  color: var(--light-text);
 }
 
 .contact__github button > a > i {
@@ -504,17 +634,16 @@ textarea:focus {
 }
 
 .contact__github button:hover {
-  background-color: #030303;
+  background-color: #23272b;
 }
 
-/* Footer */
 footer {
-  background-color: var(--dark-primary);
-  color: gray;
+  background-color: var(--secondary-bg);
+  color: var(--muted-text);
   text-align: center;
   padding: 15px 0;
   font-size: 13px;
-  border-top: 1px solid #22282f;
+  border-top: 1px solid var(--border-color);
 }
 
 footer a {
@@ -522,7 +651,6 @@ footer a {
   color: var(--primary);
 }
 
-/* Media queries */
 @media only screen and (max-width: 768px) {
   header {
     flex-direction: column;
@@ -578,6 +706,10 @@ footer a {
   
   section.projects-section {
       padding: 60px 20px;
+  }
+  
+  .skills-container {
+      padding: 30px 20px;
   }
 
   .contact-section form {
